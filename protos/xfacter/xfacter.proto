@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package xfacter;
+
+message RequestMethod {
+  string name = 1;
+}
+
+message ResponseMethod {
+  string value = 1;
+}
+
+message RequestHasCache {
+  string name = 1;
+}
+
+message ResponseHasCache {
+  bool value = 1;
+}
+
+service XFacter {
+  rpc HasCache(RequestHasCache) returns (ResponseHasCache);
+  rpc GetMethod(RequestMethod) returns (ResponseMethod);
+}

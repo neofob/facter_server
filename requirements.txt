@@ -1,0 +1,5 @@
+# required pip packages
+facterpy
+grpcio
+grpcio-tools
+grpcio-health-checking
